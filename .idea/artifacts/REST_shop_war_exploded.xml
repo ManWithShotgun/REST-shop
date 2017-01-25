@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="REST-shop:war exploded">
-    <output-path>$PROJECT_DIR$/target/rest-shop-1.0-SNAPSHOT</output-path>
+    <output-path>$PROJECT_DIR$/target/rest_shop</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -13,13 +13,15 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.1.1" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.1.1" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.1.1" />
-          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-core:1.10" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-core:1.8" />
           <element id="library" level="project" name="Maven: com.sun.jersey:jersey-servlet:1.10" />
-          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-server:1.10" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-server:1.8" />
+          <element id="library" level="project" name="Maven: com.sun.jersey.contribs:jersey-multipart:1.8" />
+          <element id="library" level="project" name="Maven: org.jvnet:mimepull:1.4" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/rest-shop-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/rest_shop/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="REST-shop/web/Web" />
     </root>

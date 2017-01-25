@@ -16,21 +16,22 @@ public class MainFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+        request.setCharacterEncoding("UTF-8");
         HttpServletRequest req = (HttpServletRequest) request;
         String path = req.getRequestURI().substring(req.getContextPath().length());
         System.out.println("path: "+path);
         if(path.startsWith("/dist/")){
-            System.out.println("request js");
+            System.out.println("request js or css");
             chain.doFilter(request,response);
             return;
         }
-        if(path.startsWith("/resourcesP/")){
+        if(path.startsWith("/ws/")){
             System.out.println("request REST service");
             chain.doFilter(request,response);
             return;
         }
         System.out.println("else dispatch");
-        request.getRequestDispatcher("/mainServletURI").forward(request, response);
+        request.getRequestDispatcher("/index.html").forward(request, response);
     }
 
     @Override

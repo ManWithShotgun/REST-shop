@@ -14,20 +14,14 @@ import java.util.ArrayList;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.FormParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 //import javax.ws.rs.core.Context;
 import javax.servlet.ServletContext;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sun.jersey.multipart.FormDataParam;
 import org.apache.log4j.Logger;
 
 @Path("/")
@@ -41,6 +35,50 @@ public class PredictionsRS {
 
     public PredictionsRS() {
     }
+
+    @GET
+    @Produces({ MediaType.APPLICATION_JSON })
+    @Path("/counts")
+    public Response getCounts(){
+        log.info("getCounts");
+        return Response.ok("{\"countMonitors\":120,\"countCameras\":120}", "application/json").build();
+    }
+
+//    @GET
+//    @Produces({ MediaType.APPLICATION_JSON })
+//    @Path("/monitors")
+//    public Response getMonitors(@QueryParam("limit") int limit){
+//        log.info("getMonitors: "+limit);
+//
+//        return Response.ok("{\"meta\":{\"limit\":10,\"next\":\"?limit=10&offset=10\",\"offset\":\"0\",\"previous\":\"?limit=10&offset=0\",\"total_count\":49},\"products\":[{\"id\":0,\"pricePer\":10,\"name\":\"Monitor0\",\"img\":\"/dist/public/monitor-1.jpg\",\"inch\":23,\"description\":\"This is the description #0\"},{\"id\":1,\"pricePer\":17,\"name\":\"Monitor1\",\"img\":\"/dist/public/monitor-1.jpg\",\"inch\":23,\"description\":\"This is the description #1\"},{\"id\":2,\"pricePer\":24,\"name\":\"Monitor2\",\"img\":\"/dist/public/monitor-1.jpg\",\"inch\":23,\"description\":\"This is the description #2\"}]}", "application/json").build();
+//    }
+//
+//    @GET
+//    @Produces({ MediaType.APPLICATION_JSON })
+//    @Path("/counts")
+//    public Response getCounts(){
+//        log.info("getCounts");
+//        return Response.ok("{\"countMonitors\":120,\"countCameras\":120}", "application/json").build();
+//    }
+//
+//    @GET
+//    @Produces({ MediaType.APPLICATION_JSON })
+//    @Path("/monitors/{id: \\d+}")
+//    public Response getDetails(){
+//        log.info("getMoreInfo");
+//        return Response.ok("{\"product\":{\"id\":1,\"pricePer\":17,\"name\":\"Monitor1\",\"img\":\"/dist/public/monitor-1.jpg\",\"inch\":23,\"description\":\"This is the description #1\"}}", "application/json").build();
+//    }
+//
+//    @PUT
+//    @Consumes({MediaType.MULTIPART_FORM_DATA})
+//    @Produces({ MediaType.APPLICATION_JSON })
+//    @Path("/monitors/{id: \\d+}")
+//    public Response updateMonitor(@DefaultValue("none") @FormDataParam("json") String json) {
+//        log.info("UPDATE: "+json);
+//        return Response.ok("{\"success\":true}", "application/json").build();
+//    }
+
+//    ///////////////////////////////////////////////////
 
     @GET
     @Path("/xml")
@@ -90,7 +128,9 @@ public class PredictionsRS {
 
 
         checkContext();
-        return Response.ok(toJson(plist), "application/json").build();
+        String strTmp=toJson(plist);
+        log.info(strTmp);
+        return Response.ok(strTmp, "application/json").build();
     }
 
     @GET
@@ -123,6 +163,7 @@ public class PredictionsRS {
         // Otherwise, create the Prediction and add it to the collection.
         int id = addPrediction(who, what);
         msg = "Prediction " + id + " created: (who = " + who + " what = " + what + ").\n";
+        log.info(msg);
         return Response.ok(msg, "text/plain").build();
     }
 
