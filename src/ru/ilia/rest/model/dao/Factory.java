@@ -1,4 +1,7 @@
-package ru.ilia.model.dao;
+package ru.ilia.rest.model.dao;
+
+import ru.ilia.soap.impls.ServicePrice;
+import ru.ilia.soap.impls.ServicePriceImplService;
 
 /**
  * Created by ILIA on 27.01.2017.
@@ -7,6 +10,7 @@ public class Factory {
     private static AccountDAO accountDAO=null;
     private static MonitorDAO monitorDAO=null;
     private static Factory instance = null;
+    private static ServicePrice servicePrice=null;
 
     public static synchronized Factory getInstance(){
         if (instance == null){
@@ -27,5 +31,15 @@ public class Factory {
             monitorDAO=new MonitorDAO();
         }
         return monitorDAO;
+    }
+
+
+
+    public ServicePrice getServicePrice(){
+        if(servicePrice==null){
+            ServicePriceImplService servicePriceImplService=new ServicePriceImplService();
+            servicePrice=servicePriceImplService.getServicePriceImplPort();
+        }
+        return servicePrice;
     }
 }

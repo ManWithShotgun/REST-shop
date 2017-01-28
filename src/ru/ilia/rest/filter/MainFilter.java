@@ -1,4 +1,4 @@
-package ru.ilia.rest;
+package ru.ilia.rest.filter;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;

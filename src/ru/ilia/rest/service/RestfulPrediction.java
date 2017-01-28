@@ -1,4 +1,4 @@
-package ru.ilia.rest;
+package ru.ilia.rest.service;
 
 /**
  * Created by ILIA on 24.01.2017.

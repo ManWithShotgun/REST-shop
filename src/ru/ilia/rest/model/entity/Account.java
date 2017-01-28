@@ -1,4 +1,6 @@
-package ru.ilia.model.entity;
+package ru.ilia.rest.model.entity;
+
+import ru.ilia.rest.model.util.Role;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

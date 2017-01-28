@@ -1,4 +1,4 @@
-package ru.ilia.rest;
+package ru.ilia.rest.service;
 
 /**
  * Created by ILIA on 24.01.2017.
@@ -6,14 +6,6 @@ package ru.ilia.rest;
 import java.io.InputStream;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
-import javax.sql.DataSource;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Context;
@@ -21,7 +13,6 @@ import javax.ws.rs.core.Response;
 //import javax.ws.rs.core.Context;
 import javax.servlet.ServletContext;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sun.jersey.multipart.FormDataParam;
 import org.apache.log4j.Logger;
 
 @Path("/")

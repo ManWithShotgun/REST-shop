@@ -1,12 +1,8 @@
-package ru.ilia.model.dao;
+package ru.ilia.rest.model.dao;
 
-import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
-import org.hibernate.criterion.Restrictions;
-import ru.ilia.model.entity.Account;
-
-import java.util.List;
+import ru.ilia.rest.model.entity.Account;
 
 /**
  * Created by ILIA on 27.01.2017.

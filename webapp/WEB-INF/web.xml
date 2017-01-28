@@ -9,7 +9,7 @@
 
     <filter>
         <filter-name>mainFilter</filter-name>
-        <filter-class>ru.ilia.rest.MainFilter</filter-class>
+        <filter-class>ru.ilia.rest.filter.MainFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>mainFilter</filter-name>
