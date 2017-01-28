@@ -15,6 +15,7 @@ public class RestfulPrediction extends Application {
         Set<Class<?>> set = new HashSet<Class<?>>();
         set.add(PredictionsRS.class);
         set.add(MonitorsRS.class);
+        set.add(CamerasRS.class);
         return set;
     }
 }

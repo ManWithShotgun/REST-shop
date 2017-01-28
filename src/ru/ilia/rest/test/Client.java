@@ -1,6 +1,7 @@
 package ru.ilia.rest.test;
 
 import ru.ilia.rest.model.dao.Factory;
+import ru.ilia.rest.model.entity.Camera;
 import ru.ilia.rest.model.entity.Monitor;
 
 /**
@@ -10,7 +11,10 @@ public class Client {
     public static void main(String[] args) {
         try {
             for (int i=0;i<25;i++){
-                Factory.getInstance().getMonitorDAO().createMonitor(new Monitor("Name"+i,24,500+i, "/dist/public/monitor-1.jpg","Description#"+i));
+                Factory.getInstance().getMonitorDAO().createMonitor(new Monitor("Monitor"+i,24,500+i, "/dist/public/monitor-1.jpg","Description#"+i));
+            }
+            for (int i=1;i<26;i++){
+                Factory.getInstance().getCameraDAO().createCamera(new Camera("Camera"+i,8,200+i, "/dist/public/camera-1.jpg","Description#"+i));
             }
         } catch (Exception e) {
             e.printStackTrace();

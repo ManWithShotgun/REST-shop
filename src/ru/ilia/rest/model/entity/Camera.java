@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
  * Created by ILIA on 28.01.2017.
  */
 @Entity
-@Table(name = "camera")
+@Table(name = "cameras")
 @JsonRootName("product")
 public class Camera {
     @Id
@@ -29,6 +29,7 @@ public class Camera {
     private int price;
     private String name;
     private String img;
+    @JsonProperty("MP")
     private int MP;
     private String description;
 
@@ -41,6 +42,12 @@ public class Camera {
         this.MP = MP;
         this.img=img;
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Camera = id: %d | name: %s | idPrice: %d | price: %d | MP: %d | img: %s | des.: %s",
+                this.id, this.name, this.idPrice, this.price, this.MP, this.img, this.description);
     }
 
     public long getId() {

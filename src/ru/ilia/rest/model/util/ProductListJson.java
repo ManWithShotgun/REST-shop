@@ -8,16 +8,16 @@ import java.util.ArrayList;
 /**
  * Created by ILIA on 28.01.2017.
  */
-public class MonitorListJson {
+public class ProductListJson<T> {
     @JsonProperty("meta")
     private MetaPagination metaPagination;
     @JsonProperty("products")
-    private ArrayList<Monitor> list;
+    private ArrayList<T> list;
 
-    public MonitorListJson() {
+    public ProductListJson() {
     }
 
-    public MonitorListJson(MetaPagination metaPagination, ArrayList<Monitor> list) {
+    public ProductListJson(MetaPagination metaPagination, ArrayList<T> list) {
         this.metaPagination = metaPagination;
         this.list = list;
     }
@@ -30,11 +30,11 @@ public class MonitorListJson {
         this.metaPagination = metaPagination;
     }
 
-    public ArrayList<Monitor> getList() {
+    public ArrayList<T> getList() {
         return list;
     }
 
-    public void setList(ArrayList<Monitor> list) {
+    public void setList(ArrayList<T> list) {
         this.list = list;
     }
 }

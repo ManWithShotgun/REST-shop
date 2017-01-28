@@ -9,6 +9,7 @@ import ru.ilia.soap.impls.ServicePriceImplService;
 public class Factory {
     private static AccountDAO accountDAO=null;
     private static MonitorDAO monitorDAO=null;
+    private static CameraDAO cameraDAO=null;
     private static Factory instance = null;
     private static ServicePrice servicePrice=null;
 
@@ -31,6 +32,13 @@ public class Factory {
             monitorDAO=new MonitorDAO();
         }
         return monitorDAO;
+    }
+
+    public CameraDAO getCameraDAO(){
+        if(cameraDAO==null){
+            cameraDAO=new CameraDAO();
+        }
+        return cameraDAO;
     }
 
 

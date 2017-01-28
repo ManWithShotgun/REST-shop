@@ -4,109 +4,110 @@ import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
-import org.hibernate.criterion.*;
+import org.hibernate.criterion.MatchMode;
+import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
 import ru.ilia.rest.exception.ExceptionDAO;
-import ru.ilia.rest.model.entity.Monitor;
+import ru.ilia.rest.model.entity.Camera;
 import ru.service_shop.Price;
 import ru.service_shop.PriceList;
 import ru.service_shop.PriceListRequest;
 
-import javax.persistence.Persistence;
 import java.util.List;
 
 /**
- * Created by ILIA on 27.01.2017.
+ * Created by ILIA on 28.01.2017.
  */
-public class MonitorDAO extends DAO{
-    static final Logger log = Logger.getLogger("MonitorDAO");
+public class CameraDAO extends DAO {
+    static final Logger log = Logger.getLogger("CameraDAO");
 
-    public Monitor createMonitor(Monitor monitor) throws ExceptionDAO {
+    public Camera createCamera(Camera camera) throws ExceptionDAO {
         try {
-            log.info("create Price: "+monitor.getPrice());
+            log.info("create Price: "+camera.getPrice());
             /*Создаем цену через soap и связываем id с продуктом*/
-            Price price=Factory.getInstance().getServicePrice().createPrice(monitor.getPrice());
-            monitor.setIdPrice(price.getId());
-            log.info(monitor);
+            Price price=Factory.getInstance().getServicePrice().createPrice(camera.getPrice());
+            camera.setIdPrice(price.getId());
+            log.info(camera);
             begin();
-            getSession().save(monitor);
+            getSession().save(camera);
             commit();
-            return monitor;
+            return camera;
         } catch (HibernateException e) {
             log.error(e.getMessage());
             rollback();
-            throw new ExceptionDAO("create monitor error");
+            throw new ExceptionDAO("create camera error");
         }
-//        if(monitor.getId()==0){
-//            throw new ExceptionDAO("create monitor error");
+//        if(camera.getId()==0){
+//            throw new ExceptionDAO("create camera error");
 //        }
     }
 
-    public Monitor selectMonitorById(long id) throws ExceptionDAO {
+    public Camera selectCameraById(long id) throws ExceptionDAO {
         try {
             log.info("id: "+id);
             begin();
-            Query q = getSession().createQuery("from Monitor where id_monitor = :id");
+            Query q = getSession().createQuery("from Camera where id_camera = :id");
             q.setLong("id", id);
-            Monitor monitor = (Monitor) q.uniqueResult();
+            Camera camera = (Camera) q.uniqueResult();
             commit();
             /*Запрос от SOAP цены по id*/
-            Price price=Factory.getInstance().getServicePrice().selectPrice(monitor.getIdPrice());
-            monitor.setPrice(price.getPrice());
-            log.info(monitor);
-            return monitor;
+            Price price=Factory.getInstance().getServicePrice().selectPrice(camera.getIdPrice());
+            camera.setPrice(price.getPrice());
+            log.info(camera);
+            return camera;
         } catch (HibernateException e) {
             log.error(e.getMessage());
             rollback();
-            throw new ExceptionDAO("select monitor error");
+            throw new ExceptionDAO("select camera error");
         }
     }
 
-    public void updateMonitor(Monitor monitor) throws Exception {
+    public void updateCamera(Camera camera) throws Exception {
         try {
-            log.info(monitor);
+            log.info(camera);
             /*Получаем id_price из таблицы с продуктом*/
-            long idPrice=this.getIdPriceFromMonitorId(monitor.getId());
-            monitor.setIdPrice(idPrice);
+            long idPrice=this.getIdPriceFromCameraId(camera.getId());
+            camera.setIdPrice(idPrice);
             /*По полученому id_price отдаем SOAP для обновы*/
-            Factory.getInstance().getServicePrice().updatePrice(new Price(idPrice,monitor.getPrice()));
+            Factory.getInstance().getServicePrice().updatePrice(new Price(idPrice,camera.getPrice()));
             begin();
-            getSession().update(monitor);
+            getSession().update(camera);
             commit();
         }catch (HibernateException e){
             log.error(e.getMessage());
             rollback();
-            throw new ExceptionDAO("update monitor error");
+            throw new ExceptionDAO("update camera error");
         }
     }
 
     /*Оказалось, что этот метод не нужен, его заменил эквивалентный с id. Но пусть остается, может найду применение:)*/
-    public void deleteMonitor(Monitor monitor) throws ExceptionDAO {
+    public void deleteCamera(Camera camera) throws ExceptionDAO {
         try {
-            log.info(monitor);
+            log.info(camera);
             /*Получаем id_price из таблицы с продуктом*/
-            long idPrice=this.getIdPriceFromMonitorId(monitor.getId());
+            long idPrice=this.getIdPriceFromCameraId(camera.getId());
             /*По полученому id_price отдаем SOAP для удаления*/
             Factory.getInstance().getServicePrice().deletePrice(idPrice);
             begin();
-            getSession().delete(monitor);
+            getSession().delete(camera);
             commit();
         }catch (HibernateException e){
             log.error(e.getMessage());
             rollback();
-            throw new ExceptionDAO("delete monitor error");
+            throw new ExceptionDAO("delete camera error");
         }
     }
 
-    public boolean deleteMonitorById(long id) throws ExceptionDAO {
+    public boolean deleteCameraById(long id) throws ExceptionDAO {
         try {
             log.info("id: "+id);
             /*Получаем id_price из таблицы с продуктом*/
-            long idPrice=this.getIdPriceFromMonitorId(id);
+            long idPrice=this.getIdPriceFromCameraId(id);
             /*По полученому id_price отдаем SOAP для удаления*/
             Factory.getInstance().getServicePrice().deletePrice(idPrice);
             int result;
             begin();
-            Query q = getSession().createQuery("delete from Monitor where id_monitor = :id");
+            Query q = getSession().createQuery("delete from Camera where id_camera = :id");
             q.setLong("id", id);
             result = q.executeUpdate();
             commit();
@@ -114,17 +115,17 @@ public class MonitorDAO extends DAO{
         }catch (HibernateException e){
             log.error(e.getMessage());
             rollback();
-            throw new ExceptionDAO("delete monitor by id error");
+            throw new ExceptionDAO("delete camera by id error");
         }
     }
 
-    public List<Monitor> selectListWithOffset(int offset, int limit, String filer, String filterName) throws ExceptionDAO {
+    public List<Camera> selectListWithOffset(int offset, int limit, String filer, String filterName) throws ExceptionDAO {
         try {
-            List<Monitor> result;
+            List<Camera> result;
             begin();
-            Criteria criteria = getSession().createCriteria(Monitor.class);
+            Criteria criteria = getSession().createCriteria(Camera.class);
             if (!filer.isEmpty()) {
-                criteria = criteria.add(Restrictions.eq("inch", Integer.parseInt(filer)));
+                criteria = criteria.add(Restrictions.eq("MP", Integer.parseInt(filer)));
             }
             if (!filterName.isEmpty()) {
                 criteria = criteria.add(Restrictions.like("name",filterName, MatchMode.ANYWHERE));
@@ -135,7 +136,7 @@ public class MonitorDAO extends DAO{
 
             PriceListRequest priceListRequest=new PriceListRequest();
             /*Формируется список id_price для запроса на SOAP*/
-            for (Monitor m : result){
+            for (Camera m : result){
                 priceListRequest.getIdList().add(m.getIdPrice());
             }
             /*Забирается список цен*/
@@ -151,17 +152,17 @@ public class MonitorDAO extends DAO{
         }catch (HibernateException e){
             log.error(e.getMessage());
             rollback();
-            throw new ExceptionDAO("select list monitors error");
+            throw new ExceptionDAO("select list cameras error");
         }
     }
 
-    public long getCountMonitors(String filer, String filterName) throws ExceptionDAO {
+    public long getCountCameras(String filer, String filterName) throws ExceptionDAO {
         try {
             long result;
             begin();
-            Criteria criteria = getSession().createCriteria(Monitor.class);
+            Criteria criteria = getSession().createCriteria(Camera.class);
             if (!filer.isEmpty()) {
-                criteria = criteria.add(Restrictions.eq("inch", Integer.parseInt(filer)));
+                criteria = criteria.add(Restrictions.eq("MP", Integer.parseInt(filer)));
             }
             if (!filterName.isEmpty()) {
                 criteria = criteria.add(Restrictions.like("name",filterName, MatchMode.ANYWHERE));
@@ -173,16 +174,16 @@ public class MonitorDAO extends DAO{
         }catch (HibernateException e){
             log.error(e.getMessage());
             rollback();
-            throw new ExceptionDAO("getCountMonitors");
+            throw new ExceptionDAO("getCountCameras");
         }
     }
 
     // ** privates
-    private long getIdPriceFromMonitorId(long id) throws ExceptionDAO {
+    private long getIdPriceFromCameraId(long id) throws ExceptionDAO {
         try {
             long result;
             begin();
-            Query q = getSession().createQuery("select idPrice from Monitor where id_monitor = :id");
+            Query q = getSession().createQuery("select idPrice from Camera where id_camera = :id");
             q.setLong("id", id);
             result = (Long) q.uniqueResult();
             commit();
@@ -191,7 +192,7 @@ public class MonitorDAO extends DAO{
         }catch (HibernateException e){
             log.error(e.getMessage());
             rollback();
-            throw new ExceptionDAO("getIdPriceFromMonitorId");
+            throw new ExceptionDAO("getIdPriceFromCameraId");
         }
     }
 }

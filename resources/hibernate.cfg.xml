@@ -13,5 +13,6 @@
         <!--        <mapping jar="hibernate-mappings.jar"/> -->
         <mapping class="ru.ilia.rest.model.entity.Account"/>
         <mapping class="ru.ilia.rest.model.entity.Monitor"/>
+        <mapping class="ru.ilia.rest.model.entity.Camera"/>
     </session-factory>
 </hibernate-configuration>

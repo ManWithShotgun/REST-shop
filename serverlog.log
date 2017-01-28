@@ -239,3 +239,300 @@ org.hibernate.SessionException: Session was already closed
 22:19:55,916  INFO main MonitorDAO:createMonitor:25 - create Price: 522
 22:19:55,921  INFO main MonitorDAO:createMonitor:25 - create Price: 523
 22:19:55,926  INFO main MonitorDAO:createMonitor:25 - create Price: 524
+00:02:01,406  INFO main Version:<clinit>:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+00:02:01,414  INFO main Version:logVersion:41 - HHH000412: Hibernate Core {4.1.7.Final}
+00:02:01,417  INFO main Environment:<clinit>:239 - HHH000206: hibernate.properties not found
+00:02:01,419  INFO main Environment:buildBytecodeProvider:342 - HHH000021: Bytecode provider name : javassist
+00:02:01,437  INFO main Configuration:configure:1933 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+00:02:01,438  INFO main Configuration:getConfigurationInputStream:1952 - HHH000040: Configuration resource: /hibernate.cfg.xml
+00:02:01,476  WARN main DTDEntityResolver:resolveEntity:74 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+00:02:01,503  INFO main Configuration:doConfigure:2074 - HHH000041: Configured SessionFactory: null
+00:02:01,665  INFO main DriverManagerConnectionProviderImpl:configure:96 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+00:02:01,669  INFO main DriverManagerConnectionProviderImpl:configure:130 - HHH000115: Hibernate connection pool size: 20
+00:02:01,669  INFO main DriverManagerConnectionProviderImpl:configure:133 - HHH000006: Autocommit mode: false
+00:02:01,669  INFO main DriverManagerConnectionProviderImpl:configure:147 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test_db]
+00:02:01,670  INFO main DriverManagerConnectionProviderImpl:configure:152 - HHH000046: Connection properties: {user=root, password=****}
+00:02:01,869  INFO main Dialect:<init>:125 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+00:02:01,892  INFO main TransactionFactoryInitiator:initiateService:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+00:02:01,897  INFO main ASTQueryTranslatorFactory:<init>:48 - HHH000397: Using ASTQueryTranslatorFactory
+00:02:01,950  INFO main Version:<clinit>:30 - HV000001: Hibernate Validator 5.3.4.Final
+00:02:02,377  INFO main SchemaExport:execute:343 - HHH000227: Running hbm2ddl schema export
+00:02:02,387  INFO main SchemaExport:execute:405 - HHH000230: Schema export complete
+00:02:02,395  INFO main MonitorDAO:createMonitor:25 - create Price: 500
+00:02:03,749  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor0 | idPrice: 43 | price: 500 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#0
+00:02:03,877  INFO main MonitorDAO:createMonitor:25 - create Price: 501
+00:02:03,881  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor1 | idPrice: 44 | price: 501 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#1
+00:02:03,884  INFO main MonitorDAO:createMonitor:25 - create Price: 502
+00:02:03,888  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor2 | idPrice: 45 | price: 502 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#2
+00:02:03,890  INFO main MonitorDAO:createMonitor:25 - create Price: 503
+00:02:03,894  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor3 | idPrice: 46 | price: 503 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#3
+00:02:03,896  INFO main MonitorDAO:createMonitor:25 - create Price: 504
+00:02:03,900  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor4 | idPrice: 47 | price: 504 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#4
+00:02:03,902  INFO main MonitorDAO:createMonitor:25 - create Price: 505
+00:02:03,907  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor5 | idPrice: 48 | price: 505 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#5
+00:02:03,910  INFO main MonitorDAO:createMonitor:25 - create Price: 506
+00:02:03,915  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor6 | idPrice: 49 | price: 506 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#6
+00:02:03,917  INFO main MonitorDAO:createMonitor:25 - create Price: 507
+00:02:03,921  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor7 | idPrice: 50 | price: 507 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#7
+00:02:03,923  INFO main MonitorDAO:createMonitor:25 - create Price: 508
+00:02:03,927  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor8 | idPrice: 51 | price: 508 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#8
+00:02:03,929  INFO main MonitorDAO:createMonitor:25 - create Price: 509
+00:02:03,933  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor9 | idPrice: 52 | price: 509 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#9
+00:02:03,935  INFO main MonitorDAO:createMonitor:25 - create Price: 510
+00:02:03,939  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor10 | idPrice: 53 | price: 510 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#10
+00:02:03,942  INFO main MonitorDAO:createMonitor:25 - create Price: 511
+00:02:03,946  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor11 | idPrice: 54 | price: 511 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#11
+00:02:03,948  INFO main MonitorDAO:createMonitor:25 - create Price: 512
+00:02:03,952  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor12 | idPrice: 55 | price: 512 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#12
+00:02:03,955  INFO main MonitorDAO:createMonitor:25 - create Price: 513
+00:02:03,959  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor13 | idPrice: 56 | price: 513 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#13
+00:02:03,961  INFO main MonitorDAO:createMonitor:25 - create Price: 514
+00:02:03,966  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor14 | idPrice: 57 | price: 514 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#14
+00:02:03,968  INFO main MonitorDAO:createMonitor:25 - create Price: 515
+00:02:03,975  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor15 | idPrice: 58 | price: 515 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#15
+00:02:03,983  INFO main MonitorDAO:createMonitor:25 - create Price: 516
+00:02:03,989  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor16 | idPrice: 59 | price: 516 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#16
+00:02:03,991  INFO main MonitorDAO:createMonitor:25 - create Price: 517
+00:02:03,995  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor17 | idPrice: 60 | price: 517 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#17
+00:02:03,998  INFO main MonitorDAO:createMonitor:25 - create Price: 518
+00:02:04,002  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor18 | idPrice: 61 | price: 518 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#18
+00:02:04,004  INFO main MonitorDAO:createMonitor:25 - create Price: 519
+00:02:04,008  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor19 | idPrice: 62 | price: 519 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#19
+00:02:04,011  INFO main MonitorDAO:createMonitor:25 - create Price: 520
+00:02:04,015  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor20 | idPrice: 63 | price: 520 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#20
+00:02:04,018  INFO main MonitorDAO:createMonitor:25 - create Price: 521
+00:02:04,022  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor21 | idPrice: 64 | price: 521 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#21
+00:02:04,024  INFO main MonitorDAO:createMonitor:25 - create Price: 522
+00:02:04,028  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor22 | idPrice: 65 | price: 522 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#22
+00:02:04,031  INFO main MonitorDAO:createMonitor:25 - create Price: 523
+00:02:04,035  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor23 | idPrice: 66 | price: 523 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#23
+00:02:04,037  INFO main MonitorDAO:createMonitor:25 - create Price: 524
+00:02:04,041  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor24 | idPrice: 67 | price: 524 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#24
+00:02:04,053  INFO main CameraDAO:createCamera:27 - create Price: 201
+00:02:04,057  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera1 | idPrice: 68 | price: 201 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#1
+00:02:04,059  WARN main DAO:rollback:61 - Cannot close
+org.hibernate.SessionException: Session was already closed
+	at org.hibernate.internal.SessionImpl.close(SessionImpl.java:339)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.hibernate.context.internal.ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:352)
+	at com.sun.proxy.$Proxy38.close(Unknown Source)
+	at ru.ilia.rest.model.dao.DAO.rollback(DAO.java:59)
+	at ru.ilia.rest.model.dao.CameraDAO.createCamera(CameraDAO.java:37)
+	at ru.ilia.rest.test.Client.main(Client.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+00:02:04,060 ERROR main CameraDAO:createCamera:38 - Unknown entity: ru.ilia.rest.model.entity.Camera
+00:07:41,210  INFO main Version:<clinit>:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+00:07:41,220  INFO main Version:logVersion:41 - HHH000412: Hibernate Core {4.1.7.Final}
+00:07:41,222  INFO main Environment:<clinit>:239 - HHH000206: hibernate.properties not found
+00:07:41,224  INFO main Environment:buildBytecodeProvider:342 - HHH000021: Bytecode provider name : javassist
+00:07:41,244  INFO main Configuration:configure:1933 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+00:07:41,245  INFO main Configuration:getConfigurationInputStream:1952 - HHH000040: Configuration resource: /hibernate.cfg.xml
+00:07:41,281  WARN main DTDEntityResolver:resolveEntity:74 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+00:07:41,309  INFO main Configuration:doConfigure:2074 - HHH000041: Configured SessionFactory: null
+00:07:41,481  INFO main DriverManagerConnectionProviderImpl:configure:96 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+00:07:41,485  INFO main DriverManagerConnectionProviderImpl:configure:130 - HHH000115: Hibernate connection pool size: 20
+00:07:41,486  INFO main DriverManagerConnectionProviderImpl:configure:133 - HHH000006: Autocommit mode: false
+00:07:41,486  INFO main DriverManagerConnectionProviderImpl:configure:147 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test_db]
+00:07:41,487  INFO main DriverManagerConnectionProviderImpl:configure:152 - HHH000046: Connection properties: {user=root, password=****}
+00:07:41,679  INFO main Dialect:<init>:125 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+00:07:41,703  INFO main TransactionFactoryInitiator:initiateService:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+00:07:41,707  INFO main ASTQueryTranslatorFactory:<init>:48 - HHH000397: Using ASTQueryTranslatorFactory
+00:07:41,752  INFO main Version:<clinit>:30 - HV000001: Hibernate Validator 5.3.4.Final
+00:07:42,163  INFO main SchemaExport:execute:343 - HHH000227: Running hbm2ddl schema export
+00:07:42,172  INFO main SchemaExport:execute:405 - HHH000230: Schema export complete
+00:07:42,180  INFO main MonitorDAO:createMonitor:25 - create Price: 500
+00:07:42,355  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor0 | idPrice: 69 | price: 500 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#0
+00:07:42,487  INFO main MonitorDAO:createMonitor:25 - create Price: 501
+00:07:42,492  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor1 | idPrice: 70 | price: 501 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#1
+00:07:42,494  INFO main MonitorDAO:createMonitor:25 - create Price: 502
+00:07:42,498  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor2 | idPrice: 71 | price: 502 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#2
+00:07:42,501  INFO main MonitorDAO:createMonitor:25 - create Price: 503
+00:07:42,505  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor3 | idPrice: 72 | price: 503 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#3
+00:07:42,507  INFO main MonitorDAO:createMonitor:25 - create Price: 504
+00:07:42,511  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor4 | idPrice: 73 | price: 504 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#4
+00:07:42,513  INFO main MonitorDAO:createMonitor:25 - create Price: 505
+00:07:42,517  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor5 | idPrice: 74 | price: 505 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#5
+00:07:42,519  INFO main MonitorDAO:createMonitor:25 - create Price: 506
+00:07:42,523  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor6 | idPrice: 75 | price: 506 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#6
+00:07:42,526  INFO main MonitorDAO:createMonitor:25 - create Price: 507
+00:07:42,530  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor7 | idPrice: 76 | price: 507 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#7
+00:07:42,532  INFO main MonitorDAO:createMonitor:25 - create Price: 508
+00:07:42,536  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor8 | idPrice: 77 | price: 508 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#8
+00:07:42,538  INFO main MonitorDAO:createMonitor:25 - create Price: 509
+00:07:42,542  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor9 | idPrice: 78 | price: 509 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#9
+00:07:42,544  INFO main MonitorDAO:createMonitor:25 - create Price: 510
+00:07:42,548  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor10 | idPrice: 79 | price: 510 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#10
+00:07:42,550  INFO main MonitorDAO:createMonitor:25 - create Price: 511
+00:07:42,553  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor11 | idPrice: 80 | price: 511 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#11
+00:07:42,556  INFO main MonitorDAO:createMonitor:25 - create Price: 512
+00:07:42,560  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor12 | idPrice: 81 | price: 512 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#12
+00:07:42,563  INFO main MonitorDAO:createMonitor:25 - create Price: 513
+00:07:42,567  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor13 | idPrice: 82 | price: 513 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#13
+00:07:42,570  INFO main MonitorDAO:createMonitor:25 - create Price: 514
+00:07:42,573  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor14 | idPrice: 83 | price: 514 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#14
+00:07:42,576  INFO main MonitorDAO:createMonitor:25 - create Price: 515
+00:07:42,580  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor15 | idPrice: 84 | price: 515 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#15
+00:07:42,587  INFO main MonitorDAO:createMonitor:25 - create Price: 516
+00:07:42,592  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor16 | idPrice: 85 | price: 516 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#16
+00:07:42,595  INFO main MonitorDAO:createMonitor:25 - create Price: 517
+00:07:42,599  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor17 | idPrice: 86 | price: 517 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#17
+00:07:42,601  INFO main MonitorDAO:createMonitor:25 - create Price: 518
+00:07:42,606  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor18 | idPrice: 87 | price: 518 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#18
+00:07:42,608  INFO main MonitorDAO:createMonitor:25 - create Price: 519
+00:07:42,612  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor19 | idPrice: 88 | price: 519 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#19
+00:07:42,614  INFO main MonitorDAO:createMonitor:25 - create Price: 520
+00:07:42,618  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor20 | idPrice: 89 | price: 520 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#20
+00:07:42,620  INFO main MonitorDAO:createMonitor:25 - create Price: 521
+00:07:42,624  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor21 | idPrice: 90 | price: 521 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#21
+00:07:42,627  INFO main MonitorDAO:createMonitor:25 - create Price: 522
+00:07:42,631  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor22 | idPrice: 91 | price: 522 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#22
+00:07:42,633  INFO main MonitorDAO:createMonitor:25 - create Price: 523
+00:07:42,637  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor23 | idPrice: 92 | price: 523 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#23
+00:07:42,639  INFO main MonitorDAO:createMonitor:25 - create Price: 524
+00:07:42,643  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor24 | idPrice: 93 | price: 524 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#24
+00:07:42,655  INFO main CameraDAO:createCamera:27 - create Price: 201
+00:07:42,660  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera1 | idPrice: 94 | price: 201 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#1
+00:07:42,660 ERROR main CameraDAO:createCamera:37 - Unknown entity: ru.ilia.rest.model.entity.Camera
+00:07:42,661  WARN main DAO:rollback:61 - Cannot close
+org.hibernate.SessionException: Session was already closed
+	at org.hibernate.internal.SessionImpl.close(SessionImpl.java:339)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.hibernate.context.internal.ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:352)
+	at com.sun.proxy.$Proxy38.close(Unknown Source)
+	at ru.ilia.rest.model.dao.DAO.rollback(DAO.java:59)
+	at ru.ilia.rest.model.dao.CameraDAO.createCamera(CameraDAO.java:38)
+	at ru.ilia.rest.test.Client.main(Client.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+00:08:00,909  INFO main Version:<clinit>:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+00:08:00,918  INFO main Version:logVersion:41 - HHH000412: Hibernate Core {4.1.7.Final}
+00:08:00,920  INFO main Environment:<clinit>:239 - HHH000206: hibernate.properties not found
+00:08:00,921  INFO main Environment:buildBytecodeProvider:342 - HHH000021: Bytecode provider name : javassist
+00:08:00,941  INFO main Configuration:configure:1933 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+00:08:00,941  INFO main Configuration:getConfigurationInputStream:1952 - HHH000040: Configuration resource: /hibernate.cfg.xml
+00:08:00,978  WARN main DTDEntityResolver:resolveEntity:74 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+00:08:01,004  INFO main Configuration:doConfigure:2074 - HHH000041: Configured SessionFactory: null
+00:08:01,181  INFO main DriverManagerConnectionProviderImpl:configure:96 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+00:08:01,185  INFO main DriverManagerConnectionProviderImpl:configure:130 - HHH000115: Hibernate connection pool size: 20
+00:08:01,185  INFO main DriverManagerConnectionProviderImpl:configure:133 - HHH000006: Autocommit mode: false
+00:08:01,186  INFO main DriverManagerConnectionProviderImpl:configure:147 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test_db]
+00:08:01,186  INFO main DriverManagerConnectionProviderImpl:configure:152 - HHH000046: Connection properties: {user=root, password=****}
+00:08:01,389  INFO main Dialect:<init>:125 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+00:08:01,408  INFO main TransactionFactoryInitiator:initiateService:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+00:08:01,413  INFO main ASTQueryTranslatorFactory:<init>:48 - HHH000397: Using ASTQueryTranslatorFactory
+00:08:01,454  INFO main Version:<clinit>:30 - HV000001: Hibernate Validator 5.3.4.Final
+00:08:01,901  INFO main SchemaExport:execute:343 - HHH000227: Running hbm2ddl schema export
+00:08:01,914  INFO main SchemaExport:execute:405 - HHH000230: Schema export complete
+00:08:01,923  INFO main MonitorDAO:createMonitor:25 - create Price: 500
+00:08:02,098  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor0 | idPrice: 95 | price: 500 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#0
+00:08:02,237  INFO main MonitorDAO:createMonitor:25 - create Price: 501
+00:08:02,242  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor1 | idPrice: 96 | price: 501 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#1
+00:08:02,245  INFO main MonitorDAO:createMonitor:25 - create Price: 502
+00:08:02,249  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor2 | idPrice: 97 | price: 502 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#2
+00:08:02,251  INFO main MonitorDAO:createMonitor:25 - create Price: 503
+00:08:02,254  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor3 | idPrice: 98 | price: 503 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#3
+00:08:02,257  INFO main MonitorDAO:createMonitor:25 - create Price: 504
+00:08:02,260  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor4 | idPrice: 99 | price: 504 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#4
+00:08:02,263  INFO main MonitorDAO:createMonitor:25 - create Price: 505
+00:08:02,267  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor5 | idPrice: 100 | price: 505 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#5
+00:08:02,270  INFO main MonitorDAO:createMonitor:25 - create Price: 506
+00:08:02,274  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor6 | idPrice: 101 | price: 506 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#6
+00:08:02,276  INFO main MonitorDAO:createMonitor:25 - create Price: 507
+00:08:02,280  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor7 | idPrice: 102 | price: 507 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#7
+00:08:02,282  INFO main MonitorDAO:createMonitor:25 - create Price: 508
+00:08:02,285  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor8 | idPrice: 103 | price: 508 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#8
+00:08:02,287  INFO main MonitorDAO:createMonitor:25 - create Price: 509
+00:08:02,290  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor9 | idPrice: 104 | price: 509 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#9
+00:08:02,293  INFO main MonitorDAO:createMonitor:25 - create Price: 510
+00:08:02,297  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor10 | idPrice: 105 | price: 510 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#10
+00:08:02,300  INFO main MonitorDAO:createMonitor:25 - create Price: 511
+00:08:02,304  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor11 | idPrice: 106 | price: 511 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#11
+00:08:02,306  INFO main MonitorDAO:createMonitor:25 - create Price: 512
+00:08:02,311  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor12 | idPrice: 107 | price: 512 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#12
+00:08:02,314  INFO main MonitorDAO:createMonitor:25 - create Price: 513
+00:08:02,318  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor13 | idPrice: 108 | price: 513 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#13
+00:08:02,320  INFO main MonitorDAO:createMonitor:25 - create Price: 514
+00:08:02,324  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor14 | idPrice: 109 | price: 514 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#14
+00:08:02,326  INFO main MonitorDAO:createMonitor:25 - create Price: 515
+00:08:02,330  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor15 | idPrice: 110 | price: 515 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#15
+00:08:02,337  INFO main MonitorDAO:createMonitor:25 - create Price: 516
+00:08:02,342  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor16 | idPrice: 111 | price: 516 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#16
+00:08:02,345  INFO main MonitorDAO:createMonitor:25 - create Price: 517
+00:08:02,349  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor17 | idPrice: 112 | price: 517 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#17
+00:08:02,351  INFO main MonitorDAO:createMonitor:25 - create Price: 518
+00:08:02,354  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor18 | idPrice: 113 | price: 518 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#18
+00:08:02,356  INFO main MonitorDAO:createMonitor:25 - create Price: 519
+00:08:02,360  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor19 | idPrice: 114 | price: 519 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#19
+00:08:02,363  INFO main MonitorDAO:createMonitor:25 - create Price: 520
+00:08:02,366  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor20 | idPrice: 115 | price: 520 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#20
+00:08:02,368  INFO main MonitorDAO:createMonitor:25 - create Price: 521
+00:08:02,372  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor21 | idPrice: 116 | price: 521 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#21
+00:08:02,374  INFO main MonitorDAO:createMonitor:25 - create Price: 522
+00:08:02,378  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor22 | idPrice: 117 | price: 522 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#22
+00:08:02,380  INFO main MonitorDAO:createMonitor:25 - create Price: 523
+00:08:02,383  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor23 | idPrice: 118 | price: 523 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#23
+00:08:02,386  INFO main MonitorDAO:createMonitor:25 - create Price: 524
+00:08:02,389  INFO main MonitorDAO:createMonitor:29 - Monitor = id: 0 | name: Monitor24 | idPrice: 119 | price: 524 | inch: 24 | img: /dist/public/monitor-1.jpg | des.: Description#24
+00:08:02,392  INFO main CameraDAO:createCamera:27 - create Price: 201
+00:08:02,396  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera1 | idPrice: 120 | price: 201 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#1
+00:08:02,403  INFO main CameraDAO:createCamera:27 - create Price: 202
+00:08:02,408  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera2 | idPrice: 121 | price: 202 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#2
+00:08:02,410  INFO main CameraDAO:createCamera:27 - create Price: 203
+00:08:02,414  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera3 | idPrice: 122 | price: 203 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#3
+00:08:02,417  INFO main CameraDAO:createCamera:27 - create Price: 204
+00:08:02,421  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera4 | idPrice: 123 | price: 204 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#4
+00:08:02,423  INFO main CameraDAO:createCamera:27 - create Price: 205
+00:08:02,427  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera5 | idPrice: 124 | price: 205 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#5
+00:08:02,429  INFO main CameraDAO:createCamera:27 - create Price: 206
+00:08:02,433  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera6 | idPrice: 125 | price: 206 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#6
+00:08:02,435  INFO main CameraDAO:createCamera:27 - create Price: 207
+00:08:02,439  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera7 | idPrice: 126 | price: 207 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#7
+00:08:02,442  INFO main CameraDAO:createCamera:27 - create Price: 208
+00:08:02,446  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera8 | idPrice: 127 | price: 208 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#8
+00:08:02,448  INFO main CameraDAO:createCamera:27 - create Price: 209
+00:08:02,452  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera9 | idPrice: 128 | price: 209 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#9
+00:08:02,454  INFO main CameraDAO:createCamera:27 - create Price: 210
+00:08:02,458  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera10 | idPrice: 129 | price: 210 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#10
+00:08:02,460  INFO main CameraDAO:createCamera:27 - create Price: 211
+00:08:02,464  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera11 | idPrice: 130 | price: 211 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#11
+00:08:02,466  INFO main CameraDAO:createCamera:27 - create Price: 212
+00:08:02,470  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera12 | idPrice: 131 | price: 212 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#12
+00:08:02,472  INFO main CameraDAO:createCamera:27 - create Price: 213
+00:08:02,477  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera13 | idPrice: 132 | price: 213 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#13
+00:08:02,479  INFO main CameraDAO:createCamera:27 - create Price: 214
+00:08:02,482  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera14 | idPrice: 133 | price: 214 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#14
+00:08:02,484  INFO main CameraDAO:createCamera:27 - create Price: 215
+00:08:02,488  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera15 | idPrice: 134 | price: 215 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#15
+00:08:02,490  INFO main CameraDAO:createCamera:27 - create Price: 216
+00:08:02,494  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera16 | idPrice: 135 | price: 216 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#16
+00:08:02,497  INFO main CameraDAO:createCamera:27 - create Price: 217
+00:08:02,501  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera17 | idPrice: 136 | price: 217 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#17
+00:08:02,503  INFO main CameraDAO:createCamera:27 - create Price: 218
+00:08:02,507  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera18 | idPrice: 137 | price: 218 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#18
+00:08:02,509  INFO main CameraDAO:createCamera:27 - create Price: 219
+00:08:02,514  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera19 | idPrice: 138 | price: 219 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#19
+00:08:02,517  INFO main CameraDAO:createCamera:27 - create Price: 220
+00:08:02,521  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera20 | idPrice: 139 | price: 220 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#20
+00:08:02,523  INFO main CameraDAO:createCamera:27 - create Price: 221
+00:08:02,527  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera21 | idPrice: 140 | price: 221 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#21
+00:08:02,529  INFO main CameraDAO:createCamera:27 - create Price: 222
+00:08:02,533  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera22 | idPrice: 141 | price: 222 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#22
+00:08:02,535  INFO main CameraDAO:createCamera:27 - create Price: 223
+00:08:02,539  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera23 | idPrice: 142 | price: 223 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#23
+00:08:02,541  INFO main CameraDAO:createCamera:27 - create Price: 224
+00:08:02,544  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera24 | idPrice: 143 | price: 224 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#24
+00:08:02,546  INFO main CameraDAO:createCamera:27 - create Price: 225
+00:08:02,550  INFO main CameraDAO:createCamera:31 - Camera = id: 0 | name: Camera25 | idPrice: 144 | price: 225 | MP: 8 | img: /dist/public/camera-1.jpg | des.: Description#25
