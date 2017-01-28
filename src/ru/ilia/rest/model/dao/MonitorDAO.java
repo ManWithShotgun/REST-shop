@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.criterion.*;
 import ru.ilia.rest.exception.ExceptionDAO;
 import ru.ilia.rest.model.entity.Monitor;
@@ -21,19 +22,19 @@ public class MonitorDAO extends DAO{
     static final Logger log = Logger.getLogger("MonitorDAO");
 
     public Monitor createMonitor(Monitor monitor) throws ExceptionDAO {
+        Session session=begin();
         try {
             log.info("create Price: "+monitor.getPrice());
             /*Создаем цену через soap и связываем id с продуктом*/
             Price price=Factory.getInstance().getServicePrice().createPrice(monitor.getPrice());
             monitor.setIdPrice(price.getId());
             log.info(monitor);
-            begin();
-            getSession().save(monitor);
-            commit();
+            session.save(monitor);
+            commit(session);
             return monitor;
         } catch (HibernateException e) {
             log.error(e.getMessage());
-            rollback();
+            rollback(session);
             throw new ExceptionDAO("create monitor error");
         }
 //        if(monitor.getId()==0){
@@ -42,13 +43,13 @@ public class MonitorDAO extends DAO{
     }
 
     public Monitor selectMonitorById(long id) throws ExceptionDAO {
+        Session session=begin();
         try {
             log.info("id: "+id);
-            begin();
-            Query q = getSession().createQuery("from Monitor where id_monitor = :id");
+            Query q = session.createQuery("from Monitor where id_monitor = :id");
             q.setLong("id", id);
             Monitor monitor = (Monitor) q.uniqueResult();
-            commit();
+            commit(session);
             /*Запрос от SOAP цены по id*/
             Price price=Factory.getInstance().getServicePrice().selectPrice(monitor.getIdPrice());
             monitor.setPrice(price.getPrice());
@@ -56,12 +57,13 @@ public class MonitorDAO extends DAO{
             return monitor;
         } catch (HibernateException e) {
             log.error(e.getMessage());
-            rollback();
+            rollback(session);
             throw new ExceptionDAO("select monitor error");
         }
     }
 
     public void updateMonitor(Monitor monitor) throws Exception {
+        Session session=begin();
         try {
             log.info(monitor);
             /*Получаем id_price из таблицы с продуктом*/
@@ -69,35 +71,35 @@ public class MonitorDAO extends DAO{
             monitor.setIdPrice(idPrice);
             /*По полученому id_price отдаем SOAP для обновы*/
             Factory.getInstance().getServicePrice().updatePrice(new Price(idPrice,monitor.getPrice()));
-            begin();
-            getSession().update(monitor);
-            commit();
+            session.update(monitor);
+            commit(session);
         }catch (HibernateException e){
             log.error(e.getMessage());
-            rollback();
+            rollback(session);
             throw new ExceptionDAO("update monitor error");
         }
     }
 
     /*Оказалось, что этот метод не нужен, его заменил эквивалентный с id. Но пусть остается, может найду применение:)*/
     public void deleteMonitor(Monitor monitor) throws ExceptionDAO {
+        Session session=begin();
         try {
             log.info(monitor);
             /*Получаем id_price из таблицы с продуктом*/
             long idPrice=this.getIdPriceFromMonitorId(monitor.getId());
             /*По полученому id_price отдаем SOAP для удаления*/
             Factory.getInstance().getServicePrice().deletePrice(idPrice);
-            begin();
-            getSession().delete(monitor);
-            commit();
+            session.delete(monitor);
+            commit(session);
         }catch (HibernateException e){
             log.error(e.getMessage());
-            rollback();
+            rollback(session);
             throw new ExceptionDAO("delete monitor error");
         }
     }
 
     public boolean deleteMonitorById(long id) throws ExceptionDAO {
+        Session session=begin();
         try {
             log.info("id: "+id);
             /*Получаем id_price из таблицы с продуктом*/
@@ -105,24 +107,23 @@ public class MonitorDAO extends DAO{
             /*По полученому id_price отдаем SOAP для удаления*/
             Factory.getInstance().getServicePrice().deletePrice(idPrice);
             int result;
-            begin();
-            Query q = getSession().createQuery("delete from Monitor where id_monitor = :id");
+            Query q = session.createQuery("delete from Monitor where id_monitor = :id");
             q.setLong("id", id);
             result = q.executeUpdate();
-            commit();
+            commit(session);
             return result == 1;
         }catch (HibernateException e){
             log.error(e.getMessage());
-            rollback();
+            rollback(session);
             throw new ExceptionDAO("delete monitor by id error");
         }
     }
 
     public List<Monitor> selectListWithOffset(int offset, int limit, String filer, String filterName) throws ExceptionDAO {
+        Session session=begin();
         try {
             List<Monitor> result;
-            begin();
-            Criteria criteria = getSession().createCriteria(Monitor.class);
+            Criteria criteria = session.createCriteria(Monitor.class);
             if (!filer.isEmpty()) {
                 criteria = criteria.add(Restrictions.eq("inch", Integer.parseInt(filer)));
             }
@@ -131,7 +132,7 @@ public class MonitorDAO extends DAO{
             }
             criteria = criteria.setFirstResult(offset).setMaxResults(limit);
             result = criteria.list();
-            commit();
+            commit(session);
 
             PriceListRequest priceListRequest=new PriceListRequest();
             /*Формируется список id_price для запроса на SOAP*/
@@ -149,17 +150,17 @@ public class MonitorDAO extends DAO{
             }
             return result;
         }catch (HibernateException e){
-            log.error(e.getMessage());
-            rollback();
+            log.error(e.getMessage(),e);
+            rollback(session);
             throw new ExceptionDAO("select list monitors error");
         }
     }
 
     public long getCountMonitors(String filer, String filterName) throws ExceptionDAO {
+        Session session=begin();
         try {
             long result;
-            begin();
-            Criteria criteria = getSession().createCriteria(Monitor.class);
+            Criteria criteria = session.createCriteria(Monitor.class);
             if (!filer.isEmpty()) {
                 criteria = criteria.add(Restrictions.eq("inch", Integer.parseInt(filer)));
             }
@@ -167,30 +168,46 @@ public class MonitorDAO extends DAO{
                 criteria = criteria.add(Restrictions.like("name",filterName, MatchMode.ANYWHERE));
             }
             result = (long)criteria.setProjection(Projections.rowCount()).uniqueResult();
-            commit();
+            commit(session);
             log.info(result);
             return result;
         }catch (HibernateException e){
             log.error(e.getMessage());
-            rollback();
+            rollback(session);
+            throw new ExceptionDAO("getCountMonitors");
+        }
+    }
+
+    public long getCountMonitors() throws ExceptionDAO {
+        Session session=begin();
+        try {
+            long result;
+            Criteria criteria = session.createCriteria(Monitor.class);
+            result = (long)criteria.setProjection(Projections.rowCount()).uniqueResult();
+            commit(session);
+            log.info(result);
+            return result;
+        }catch (HibernateException e){
+            log.error(e.getMessage());
+            rollback(session);
             throw new ExceptionDAO("getCountMonitors");
         }
     }
 
     // ** privates
     private long getIdPriceFromMonitorId(long id) throws ExceptionDAO {
+        Session session=begin();
         try {
             long result;
-            begin();
-            Query q = getSession().createQuery("select idPrice from Monitor where id_monitor = :id");
+            Query q = session.createQuery("select idPrice from Monitor where id_monitor = :id");
             q.setLong("id", id);
             result = (Long) q.uniqueResult();
-            commit();
+            commit(session);
             log.info("idPrice: "+result);
             return result;
         }catch (HibernateException e){
             log.error(e.getMessage());
-            rollback();
+            rollback(session);
             throw new ExceptionDAO("getIdPriceFromMonitorId");
         }
     }

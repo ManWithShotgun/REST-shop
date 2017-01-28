@@ -2,6 +2,7 @@ package ru.ilia.rest.model.dao;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
+import org.hibernate.Session;
 import ru.ilia.rest.model.entity.Account;
 
 /**
@@ -10,50 +11,50 @@ import ru.ilia.rest.model.entity.Account;
 public class AccountDAO extends DAO {
 
     public Account createAccount(Account account) throws Exception {
+        Session session=begin();
         try {
-            begin();
-            getSession().save(account);
-            commit();
+            session.save(account);
+            commit(session);
             return account;
         } catch (HibernateException e) {
-            rollback();
+            rollback(session);
             throw new Exception("DAO error: "+e);
         }
     }
 
     public Account selectAccountById(long id) throws Exception {
+        Session session=begin();
         try {
-            begin();
-            Query q = getSession().createQuery("from Account where id_account = :id");
+            Query q = session.createQuery("from Account where id_account = :id");
             q.setLong("id", id);
             Account account = (Account) q.uniqueResult();
-            commit();
+            commit(session);
             return account;
         } catch (HibernateException e) {
-            rollback();
+            rollback(session);
             throw new Exception("DAO error: " + e);
         }
     }
 
     public void updateAccount(Account account){
-        begin();
-        getSession().update(account);
-        commit();
+        Session session=begin();
+        session.update(account);
+        commit(session);
     }
 
     public void deleteAccount(Account account){
-        begin();
-        getSession().delete(account);
-        commit();
+        Session session=begin();
+        session.delete(account);
+        commit(session);
     }
 
     public boolean deleteAccountById(long id){
         int result;
-        begin();
-        Query q = getSession().createQuery("delete from Account where id_account = :id");
+        Session session=begin();
+        Query q = session.createQuery("delete from Account where id_account = :id");
         q.setLong("id", id);
         result=q.executeUpdate();
-        commit();
+        commit(session);
         return result==1;
     }
 

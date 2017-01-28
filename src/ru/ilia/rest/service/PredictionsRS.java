@@ -14,6 +14,8 @@ import javax.ws.rs.core.Response;
 import javax.servlet.ServletContext;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.log4j.Logger;
+import ru.ilia.rest.exception.ExceptionDAO;
+import ru.ilia.rest.model.dao.Factory;
 
 @Path("/")
 public class PredictionsRS {
@@ -31,8 +33,15 @@ public class PredictionsRS {
     @Produces({ MediaType.APPLICATION_JSON })
     @Path("/counts")
     public Response getCounts(){
-        log.info("getCounts");
-        return Response.ok("{\"countMonitors\":120,\"countCameras\":120}", "application/json").build();
+        try {
+            long countMonitors = Factory.getInstance().getMonitorDAO().getCountMonitors("","");
+            long countCameras = Factory.getInstance().getCameraDAO().getCountCameras("","");
+            log.info("Monitors: "+countMonitors+" | "+countCameras);
+            return Response.ok(String.format("{\"countMonitors\":%d,\"countCameras\":%d}",countMonitors,countCameras)).build();
+        } catch (ExceptionDAO exceptionDAO) {
+            log.error("ExceptionDAO", exceptionDAO);
+            return Response.ok("{\"countMonitors\":-1,\"countCameras\":-1}").build();
+        }
     }
 
 //    @GET
