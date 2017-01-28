@@ -80,20 +80,20 @@ public class MonitorsRS {
 
     // ** utilities
 
-    @GET
-    @Produces({MediaType.APPLICATION_JSON})
-    @Path("/json")
-    public Response justForTest(){
-        return Response.ok(toJson(new Account(32,"login1","pass1",2)),"application/json").build();
-    }
-
-
-    private String toJson(Account account) {
-        String json = "If you see this, there's a problem.";
-        try {
-            json = new ObjectMapper().writeValueAsString(account);
-        } catch (Exception e) {
-        }
-        return json;
-    }
+//    @GET
+//    @Produces({MediaType.APPLICATION_JSON})
+//    @Path("/json")
+//    public Response justForTest(){
+//        return Response.ok(toJson(new Account(32,"login1","pass1",2)),"application/json").build();
+//    }
+//
+//
+//    private String toJson(Account account) {
+//        String json = "If you see this, there's a problem.";
+//        try {
+//            json = new ObjectMapper().writeValueAsString(account);
+//        } catch (Exception e) {
+//        }
+//        return json;
+//    }
 }

@@ -1,0 +1,19 @@
+00:44:40,870  INFO main Version:<clinit>:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+00:44:40,877  INFO main Version:logVersion:41 - HHH000412: Hibernate Core {4.1.7.Final}
+00:44:40,879  INFO main Environment:<clinit>:239 - HHH000206: hibernate.properties not found
+00:44:40,880  INFO main Environment:buildBytecodeProvider:342 - HHH000021: Bytecode provider name : javassist
+00:44:40,902  INFO main Configuration:configure:1933 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+00:44:40,902  INFO main Configuration:getConfigurationInputStream:1952 - HHH000040: Configuration resource: /hibernate.cfg.xml
+00:44:40,941  WARN main DTDEntityResolver:resolveEntity:74 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+00:44:40,966  INFO main Configuration:doConfigure:2074 - HHH000041: Configured SessionFactory: null
+00:44:41,114  INFO main DriverManagerConnectionProviderImpl:configure:96 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+00:44:41,118  INFO main DriverManagerConnectionProviderImpl:configure:130 - HHH000115: Hibernate connection pool size: 20
+00:44:41,119  INFO main DriverManagerConnectionProviderImpl:configure:133 - HHH000006: Autocommit mode: false
+00:44:41,119  INFO main DriverManagerConnectionProviderImpl:configure:147 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test_db]
+00:44:41,120  INFO main DriverManagerConnectionProviderImpl:configure:152 - HHH000046: Connection properties: {user=root, password=****}
+00:44:41,302  INFO main Dialect:<init>:125 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+00:44:41,323  INFO main TransactionFactoryInitiator:initiateService:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+00:44:41,328  INFO main ASTQueryTranslatorFactory:<init>:48 - HHH000397: Using ASTQueryTranslatorFactory
+00:44:41,369  INFO main Version:<clinit>:30 - HV000001: Hibernate Validator 5.3.4.Final
+00:44:41,779  INFO main SchemaExport:execute:343 - HHH000227: Running hbm2ddl schema export
+00:44:41,789  INFO main SchemaExport:execute:405 - HHH000230: Schema export complete

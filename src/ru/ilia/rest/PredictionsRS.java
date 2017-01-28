@@ -101,32 +101,6 @@ public class PredictionsRS {
     @Produces({ MediaType.APPLICATION_JSON })
     @Path("/json")
     public Response getJson() {
-        //DELETE
-        try {
-            InitialContext initContext = null;
-            DataSource dataSource = null;
-            initContext = new InitialContext();
-            dataSource = (DataSource) initContext.lookup("java:comp/env/jdbc/appname");
-            Connection connection = dataSource.getConnection();
-            PreparedStatement psSelect=connection.prepareStatement("select id_account, login, password, gr from accounts");
-            ResultSet rs = psSelect.executeQuery();
-
-            while (rs.next()) {
-                int id=rs.getInt("id_account");
-                String login = rs.getString("login");
-                String pas=rs.getString("password");
-                int group = rs.getInt("gr");
-                log.info(id+" " + login+" "+ pas +" "+group);
-            }
-            connection.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (NamingException e) {
-            e.printStackTrace();
-        }
-        //DELETE
-
-
         checkContext();
         String strTmp=toJson(plist);
         log.info(strTmp);
