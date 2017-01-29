@@ -19,7 +19,7 @@ import java.util.List;
  * Created by ILIA on 27.01.2017.
  */
 public class MonitorDAO extends DAO{
-    static final Logger log = Logger.getLogger("MonitorDAO");
+    private static final Logger log = Logger.getLogger("MonitorDAO");
 
     public Monitor createMonitor(Monitor monitor) throws ExceptionDAO {
         Session session=begin();
@@ -62,7 +62,7 @@ public class MonitorDAO extends DAO{
         }
     }
 
-    public void updateMonitor(Monitor monitor) throws Exception {
+    public void updateMonitor(Monitor monitor) throws ExceptionDAO {
         Session session=begin();
         try {
             log.info(monitor);

@@ -15,11 +15,12 @@ public class Account {
     @Column(name="id_account")
     @GeneratedValue
     private long id;
-    @NotNull
+    @Column(unique = true, nullable = false)
     private String username;
     @NotNull
     private String password;
     private boolean online;
+    private String token;
     @Enumerated(EnumType.STRING)
     private Role role;
 
@@ -31,6 +32,11 @@ public class Account {
         this.password = password;
         this.online = online;
         this.role = role;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Account: id: %d user: %s pass: %s", this.id, this.username, this.password);
     }
 
     public long getId() {
@@ -71,5 +77,13 @@ public class Account {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }

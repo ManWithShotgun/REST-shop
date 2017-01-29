@@ -33,7 +33,7 @@ public class MonitorsRS {
 
 
     @GET
-    @Produces({ MediaType.APPLICATION_JSON })
+    @Produces({MediaType.APPLICATION_JSON})
     public Response getMonitors(@DefaultValue("10")@QueryParam("limit") int limit,
                                 @DefaultValue("0") @QueryParam("offset") int offset,
                                 @DefaultValue("") @QueryParam("filter") String filter,
@@ -121,8 +121,8 @@ public class MonitorsRS {
         } catch (IOException e) {
             log.error("IOException",e);
             return responseFailJson();
-        } catch (Exception e) {
-            log.error("Exception",e);
+        } catch (ExceptionDAO exceptionDAO) {
+            log.error("exceptionDAO",exceptionDAO);
             return responseFailJson();
         }
     }

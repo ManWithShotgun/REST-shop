@@ -9,11 +9,11 @@ import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
 @ApplicationPath("/ws/")
-public class RestfulPrediction extends Application {
+public class RestfulLoader extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         Set<Class<?>> set = new HashSet<Class<?>>();
-        set.add(PredictionsRS.class);
+        set.add(RootRS.class);
         set.add(MonitorsRS.class);
         set.add(CamerasRS.class);
         return set;

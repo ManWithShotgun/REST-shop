@@ -63,7 +63,7 @@ public class CameraDAO extends DAO {
         }
     }
 
-    public void updateCamera(Camera camera) throws Exception {
+    public void updateCamera(Camera camera) throws ExceptionDAO {
         Session session=begin();
         try {
             log.info(camera);
