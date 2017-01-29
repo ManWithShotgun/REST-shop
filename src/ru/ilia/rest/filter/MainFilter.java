@@ -6,6 +6,8 @@ import java.io.IOException;
 
 /**
  * Created by ILIA on 24.01.2017.
+ *
+ * Класс используется для отдачи статики (frontend) и доступа к REST сервису
  */
 public class MainFilter implements Filter {
 
