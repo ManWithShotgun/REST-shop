@@ -12,13 +12,19 @@ import ru.ilia.rest.model.util.Role;
 public class Client {
     public static void main(String[] args) {
         try {
-//            for (int i=0;i<25;i++){
+//            for (int i=1;i<26;i++){
 //                Factory.getInstance().getMonitorDAO().createMonitor(new Monitor("Monitor"+i,24,500+i, "/dist/public/monitor-1.jpg","Description#"+i));
+//            }
+//            for (int i=26;i<51;i++){
+//                Factory.getInstance().getMonitorDAO().createMonitor(new Monitor("Monitor"+i,18,500+i, "/dist/public/monitor-1.jpg","Description#"+i));
 //            }
 //            for (int i=1;i<26;i++){
 //                Factory.getInstance().getCameraDAO().createCamera(new Camera("Camera"+i,8,200+i, "/dist/public/camera-1.jpg","Description#"+i));
 //            }
-
+//            for (int i=26;i<51;i++){
+//                Factory.getInstance().getCameraDAO().createCamera(new Camera("Camera"+i,14,200+i, "/dist/public/camera-1.jpg","Description#"+i));
+//            }
+//
 //            Factory.getInstance().getAccountDAO().createAccount(new Account("1", "1", false, Role.admin));
 
         } catch (Exception e) {
