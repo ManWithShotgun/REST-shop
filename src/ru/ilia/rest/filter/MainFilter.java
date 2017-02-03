@@ -5,9 +5,11 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
- * Created by ILIA on 24.01.2017.
+ * Перекдирует запросы в utf-8
  *
- * Класс используется для отдачи статики (frontend) и доступа к REST сервису
+ * Класс используется для отдачи статики (frontend) по пути /dist/*;
+ * Доступа к REST сервису по пути /ws/*;
+ * В иных случаях отдается index.html
  */
 public class MainFilter implements Filter {
 

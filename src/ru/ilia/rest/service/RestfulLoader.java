@@ -1,8 +1,8 @@
 package ru.ilia.rest.service;
 
 /**
- * Created by ILIA on 24.01.2017.
- */
+ * Загружает сервисы по пути /ws/
+ **/
 import java.util.Set;
 import java.util.HashSet;
 import javax.ws.rs.ApplicationPath;

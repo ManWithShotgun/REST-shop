@@ -13,16 +13,23 @@ import java.math.BigInteger;
 import java.security.SecureRandom;
 
 /**
- * Created by ILIA on 29.01.2017.
+ * Здесь содержутся методы отвечающте за заботу с аккаунтом: login, register, logout;
+ * Метод, который отдает количество мониторов и камер.
+ * path: /ws/
+ * @author ILIA
  */
 @Path("/")
 public class RootRS {
 
-    static final Logger log = Logger.getLogger("RootRS");
+    private static final Logger log = Logger.getLogger("RootRS");
 
     public RootRS() {
     }
 
+    /**
+     * Select count Monitors and Cameras in json format
+     * @return json
+     * */
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     @Path("/counts")
@@ -38,6 +45,12 @@ public class RootRS {
         }
     }
 
+    /**
+     * Login in shop
+     * @param username login
+     * @param password pass
+     * @return json fail or success; token - индитификатор пользоателя
+     * */
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     @Path("/login")
@@ -77,6 +90,13 @@ public class RootRS {
         }
     }
 
+    /**
+     * Register in shop
+     * @param username login
+     * @param password pass
+     * @param role user role
+     * @return json fail or success
+     * */
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     @Path("/register")
@@ -108,6 +128,11 @@ public class RootRS {
         }
     }
 
+    /**
+     * Logout
+     * @param token
+     * @return json fail or success
+     * */
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     @Path("/logout")
