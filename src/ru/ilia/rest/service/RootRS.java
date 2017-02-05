@@ -74,14 +74,14 @@ public class RootRS {
                 log.info("pass incorrect");
                 return responseAuthFailJson("password-wrong");
             }
-            if(account.isOnline()){
+            if(!account.getToken().isEmpty()){
                 log.info("account already online");
                 return responseAuthFailJson("password-wrong");
             }
             String token= JWT.create().withClaim("role", account.getRole().name()).sign(Algorithm.HMAC256("privateKey"));
             String role=account.getRole().toString();
             account.setToken(token);
-            account.setOnline(true);
+//            account.setOnline(true);
             Factory.getInstance().getAccountDAO().updateAccount(account);
             log.info(account);
 
@@ -108,6 +108,8 @@ public class RootRS {
     @Path("/register")
     public Response register(@DefaultValue("") @QueryParam("username") String username,
                              @DefaultValue("") @QueryParam("password") String password,
+                             @DefaultValue("") @QueryParam("name") String name,
+                             @DefaultValue("") @QueryParam("email") String email,
                              @DefaultValue("user") @QueryParam("role") String role){
         try {
             log.info("REGISTER");
@@ -119,7 +121,7 @@ public class RootRS {
                 log.info("username-exists");
                 return responseRegFailJson("username-exists");
             }
-            Account account = new Account(username,password,false,Role.valueOf(role));
+            Account account = new Account(username,password,name,email,Role.valueOf(role));
             Factory.getInstance().getAccountDAO().createAccount(account);
             log.info(account);
 
@@ -154,7 +156,7 @@ public class RootRS {
                 log.info("account empty");
                 return responseBadRequest("null account");
             }
-            account.setOnline(false);
+//            account.setOnline(false);
             account.setToken("");
             Factory.getInstance().getAccountDAO().updateAccount(account);
             log.info(account);

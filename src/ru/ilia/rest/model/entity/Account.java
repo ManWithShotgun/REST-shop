@@ -19,7 +19,8 @@ public class Account {
     private String username;
     @NotNull
     private String password;
-    private boolean online;
+    private String name;
+    private String email;
     private String token;
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -27,10 +28,11 @@ public class Account {
     public Account() {
     }
 
-    public Account(String username, String password, boolean online, Role role) {
+    public Account(String username, String password, String name, String email, Role role) {
         this.username = username;
         this.password = password;
-        this.online = online;
+        this.name = name;
+        this.email = email;
         this.role = role;
     }
 
@@ -63,12 +65,20 @@ public class Account {
         this.password = password;
     }
 
-    public boolean isOnline() {
-        return online;
+    public String getName() {
+        return name;
     }
 
-    public void setOnline(boolean online) {
-        this.online = online;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Role getRole() {

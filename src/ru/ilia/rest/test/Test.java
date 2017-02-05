@@ -31,8 +31,7 @@ public class Test {
 //            System.out.println(token);
 
 
-            Factory.getInstance().getCameraDAO().createCamera(new Camera("213",3,321,"urq","dasdsa"));
-//            Factory.getInstance().getAccountDAO().createAccount(new Account("dssssssadsadsa","fdfffdasdsadas",false, Role.admin));
+            Factory.getInstance().getAccountDAO().createAccount(new Account("1","1","Name","Email",Role.admin));
         } catch (ExceptionDAO exceptionDAO) {
             exceptionDAO.printStackTrace();
         }
