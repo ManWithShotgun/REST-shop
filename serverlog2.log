@@ -1,0 +1,118 @@
+03:30:37,237  INFO main Version:<clinit>:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+03:30:37,244  INFO main Version:logVersion:41 - HHH000412: Hibernate Core {4.1.7.Final}
+03:30:37,246  INFO main Environment:<clinit>:239 - HHH000206: hibernate.properties not found
+03:30:37,247  INFO main Environment:buildBytecodeProvider:342 - HHH000021: Bytecode provider name : javassist
+03:30:37,268  INFO main Configuration:configure:1933 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+03:30:37,268  INFO main Configuration:getConfigurationInputStream:1952 - HHH000040: Configuration resource: /hibernate.cfg.xml
+03:30:55,791  INFO main Version:<clinit>:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+03:30:55,800  INFO main Version:logVersion:41 - HHH000412: Hibernate Core {4.1.7.Final}
+03:30:55,802  INFO main Environment:<clinit>:239 - HHH000206: hibernate.properties not found
+03:30:55,804  INFO main Environment:buildBytecodeProvider:342 - HHH000021: Bytecode provider name : javassist
+03:30:55,821  INFO main Configuration:configure:1933 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+03:30:55,821  INFO main Configuration:getConfigurationInputStream:1952 - HHH000040: Configuration resource: /hibernate.cfg.xml
+03:31:46,487  INFO main Version:<clinit>:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+03:31:46,494  INFO main Version:logVersion:41 - HHH000412: Hibernate Core {4.1.7.Final}
+03:31:46,496  INFO main Environment:<clinit>:239 - HHH000206: hibernate.properties not found
+03:31:46,498  INFO main Environment:buildBytecodeProvider:342 - HHH000021: Bytecode provider name : javassist
+03:31:46,516  INFO main Configuration:configure:1933 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+03:31:46,516  INFO main Configuration:getConfigurationInputStream:1952 - HHH000040: Configuration resource: /hibernate.cfg.xml
+03:31:49,727  INFO main Version:<clinit>:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+03:31:49,737  INFO main Version:logVersion:41 - HHH000412: Hibernate Core {4.1.7.Final}
+03:31:49,739  INFO main Environment:<clinit>:239 - HHH000206: hibernate.properties not found
+03:31:49,741  INFO main Environment:buildBytecodeProvider:342 - HHH000021: Bytecode provider name : javassist
+03:31:49,758  INFO main Configuration:configure:1933 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+03:31:49,759  INFO main Configuration:getConfigurationInputStream:1952 - HHH000040: Configuration resource: /hibernate.cfg.xml
+03:35:40,448  INFO main Version:<clinit>:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+03:35:40,454  INFO main Version:logVersion:41 - HHH000412: Hibernate Core {4.1.7.Final}
+03:35:40,456  INFO main Environment:<clinit>:239 - HHH000206: hibernate.properties not found
+03:35:40,458  INFO main Environment:buildBytecodeProvider:342 - HHH000021: Bytecode provider name : javassist
+03:35:40,474  INFO main Configuration:configure:1933 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+03:35:40,475  INFO main Configuration:getConfigurationInputStream:1952 - HHH000040: Configuration resource: /hibernate.cfg.xml
+03:35:40,513  WARN main DTDEntityResolver:resolveEntity:74 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+03:35:40,547  INFO main Configuration:doConfigure:2074 - HHH000041: Configured SessionFactory: null
+03:35:40,726  INFO main DriverManagerConnectionProviderImpl:configure:96 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+03:35:40,730  INFO main DriverManagerConnectionProviderImpl:configure:130 - HHH000115: Hibernate connection pool size: 20
+03:35:40,730  INFO main DriverManagerConnectionProviderImpl:configure:133 - HHH000006: Autocommit mode: false
+03:35:40,731  INFO main DriverManagerConnectionProviderImpl:configure:147 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/shop_db]
+03:35:40,731  INFO main DriverManagerConnectionProviderImpl:configure:152 - HHH000046: Connection properties: {user=root, password=****}
+03:35:40,940  INFO main Dialect:<init>:125 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+03:35:40,962  INFO main TransactionFactoryInitiator:initiateService:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+03:35:40,967  INFO main ASTQueryTranslatorFactory:<init>:48 - HHH000397: Using ASTQueryTranslatorFactory
+03:35:41,007  INFO main Version:<clinit>:30 - HV000001: Hibernate Validator 5.3.4.Final
+03:35:41,460  INFO main CameraDAO:createCamera:28 - create Price: 321
+03:36:56,209  INFO main Version:<clinit>:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+03:36:56,219  INFO main Version:logVersion:41 - HHH000412: Hibernate Core {4.1.7.Final}
+03:36:56,221  INFO main Environment:<clinit>:239 - HHH000206: hibernate.properties not found
+03:36:56,224  INFO main Environment:buildBytecodeProvider:342 - HHH000021: Bytecode provider name : javassist
+03:36:56,243  INFO main Configuration:configure:1933 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+03:36:56,243  INFO main Configuration:getConfigurationInputStream:1952 - HHH000040: Configuration resource: /hibernate.cfg.xml
+03:36:56,286  WARN main DTDEntityResolver:resolveEntity:74 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+03:36:56,311  INFO main Configuration:doConfigure:2074 - HHH000041: Configured SessionFactory: null
+03:36:56,470  INFO main DriverManagerConnectionProviderImpl:configure:96 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+03:36:56,476  INFO main DriverManagerConnectionProviderImpl:configure:130 - HHH000115: Hibernate connection pool size: 20
+03:36:56,476  INFO main DriverManagerConnectionProviderImpl:configure:133 - HHH000006: Autocommit mode: false
+03:36:56,477  INFO main DriverManagerConnectionProviderImpl:configure:147 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/shop_db]
+03:36:56,477  INFO main DriverManagerConnectionProviderImpl:configure:152 - HHH000046: Connection properties: {user=root, password=****}
+03:36:56,665  INFO main Dialect:<init>:125 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+03:36:56,685  INFO main TransactionFactoryInitiator:initiateService:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+03:36:56,689  INFO main ASTQueryTranslatorFactory:<init>:48 - HHH000397: Using ASTQueryTranslatorFactory
+03:36:56,729  INFO main Version:<clinit>:30 - HV000001: Hibernate Validator 5.3.4.Final
+03:36:57,280  INFO main DAO:createAccount:22 - Account: id: 3 user: dssssssa pass: fdfffdas
+03:37:15,048  INFO main Version:<clinit>:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+03:37:15,057  INFO main Version:logVersion:41 - HHH000412: Hibernate Core {4.1.7.Final}
+03:37:15,060  INFO main Environment:<clinit>:239 - HHH000206: hibernate.properties not found
+03:37:15,062  INFO main Environment:buildBytecodeProvider:342 - HHH000021: Bytecode provider name : javassist
+03:37:15,080  INFO main Configuration:configure:1933 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+03:37:15,080  INFO main Configuration:getConfigurationInputStream:1952 - HHH000040: Configuration resource: /hibernate.cfg.xml
+03:37:15,119  WARN main DTDEntityResolver:resolveEntity:74 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+03:37:15,140  INFO main Configuration:doConfigure:2074 - HHH000041: Configured SessionFactory: null
+03:37:15,302  INFO main DriverManagerConnectionProviderImpl:configure:96 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+03:37:15,306  INFO main DriverManagerConnectionProviderImpl:configure:130 - HHH000115: Hibernate connection pool size: 20
+03:37:15,307  INFO main DriverManagerConnectionProviderImpl:configure:133 - HHH000006: Autocommit mode: false
+03:37:15,307  INFO main DriverManagerConnectionProviderImpl:configure:147 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/shop_db?useUnicode=true&characterEncoding=utf-8]
+03:37:15,307  INFO main DriverManagerConnectionProviderImpl:configure:152 - HHH000046: Connection properties: {user=root, password=****}
+03:37:15,494  INFO main Dialect:<init>:125 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+03:37:15,516  INFO main TransactionFactoryInitiator:initiateService:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+03:37:15,520  INFO main ASTQueryTranslatorFactory:<init>:48 - HHH000397: Using ASTQueryTranslatorFactory
+03:37:15,567  INFO main Version:<clinit>:30 - HV000001: Hibernate Validator 5.3.4.Final
+03:37:16,100  WARN main SqlExceptionHelper:logExceptions:143 - SQL Error: 1062, SQLState: 23000
+03:37:16,100 ERROR main SqlExceptionHelper:logExceptions:144 - Duplicate entry 'dssssssa' for key 'username'
+03:37:16,101 ERROR main DAO:createAccount:25 - Duplicate entry 'dssssssa' for key 'username'
+03:37:16,102  INFO main DAO:rollback:45 - rollback
+03:37:43,008  INFO main Version:<clinit>:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+03:37:43,015  INFO main Version:logVersion:41 - HHH000412: Hibernate Core {4.1.7.Final}
+03:37:43,017  INFO main Environment:<clinit>:239 - HHH000206: hibernate.properties not found
+03:37:43,018  INFO main Environment:buildBytecodeProvider:342 - HHH000021: Bytecode provider name : javassist
+03:37:43,036  INFO main Configuration:configure:1933 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+03:37:43,036  INFO main Configuration:getConfigurationInputStream:1952 - HHH000040: Configuration resource: /hibernate.cfg.xml
+03:37:43,073  WARN main DTDEntityResolver:resolveEntity:74 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+03:37:43,098  INFO main Configuration:doConfigure:2074 - HHH000041: Configured SessionFactory: null
+03:37:43,257  INFO main DriverManagerConnectionProviderImpl:configure:96 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+03:37:43,261  INFO main DriverManagerConnectionProviderImpl:configure:130 - HHH000115: Hibernate connection pool size: 20
+03:37:43,262  INFO main DriverManagerConnectionProviderImpl:configure:133 - HHH000006: Autocommit mode: false
+03:37:43,262  INFO main DriverManagerConnectionProviderImpl:configure:147 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/shop_db?useUnicode=true&characterEncoding=utf-8]
+03:37:43,262  INFO main DriverManagerConnectionProviderImpl:configure:152 - HHH000046: Connection properties: {user=root, password=****}
+03:37:43,452  INFO main Dialect:<init>:125 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+03:37:43,470  INFO main TransactionFactoryInitiator:initiateService:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+03:37:43,476  INFO main ASTQueryTranslatorFactory:<init>:48 - HHH000397: Using ASTQueryTranslatorFactory
+03:37:43,525  INFO main Version:<clinit>:30 - HV000001: Hibernate Validator 5.3.4.Final
+03:37:44,060  INFO main DAO:createAccount:22 - Account: id: 5 user: dssssssadsadsa pass: fdfffdasdsadas
+03:38:20,474  INFO main Version:<clinit>:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+03:38:20,481  INFO main Version:logVersion:41 - HHH000412: Hibernate Core {4.1.7.Final}
+03:38:20,483  INFO main Environment:<clinit>:239 - HHH000206: hibernate.properties not found
+03:38:20,484  INFO main Environment:buildBytecodeProvider:342 - HHH000021: Bytecode provider name : javassist
+03:38:20,502  INFO main Configuration:configure:1933 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+03:38:20,502  INFO main Configuration:getConfigurationInputStream:1952 - HHH000040: Configuration resource: /hibernate.cfg.xml
+03:38:20,538  WARN main DTDEntityResolver:resolveEntity:74 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+03:38:20,564  INFO main Configuration:doConfigure:2074 - HHH000041: Configured SessionFactory: null
+03:38:20,723  INFO main DriverManagerConnectionProviderImpl:configure:96 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+03:38:20,728  INFO main DriverManagerConnectionProviderImpl:configure:130 - HHH000115: Hibernate connection pool size: 20
+03:38:20,728  INFO main DriverManagerConnectionProviderImpl:configure:133 - HHH000006: Autocommit mode: false
+03:38:20,729  INFO main DriverManagerConnectionProviderImpl:configure:147 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/shop_db?useUnicode=true&characterEncoding=utf-8]
+03:38:20,729  INFO main DriverManagerConnectionProviderImpl:configure:152 - HHH000046: Connection properties: {user=root, password=****}
+03:38:20,923  INFO main Dialect:<init>:125 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+03:38:20,942  INFO main TransactionFactoryInitiator:initiateService:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+03:38:20,946  INFO main ASTQueryTranslatorFactory:<init>:48 - HHH000397: Using ASTQueryTranslatorFactory
+03:38:20,992  INFO main Version:<clinit>:30 - HV000001: Hibernate Validator 5.3.4.Final
+03:38:21,458  INFO main CameraDAO:createCamera:28 - create Price: 321
+03:38:22,775  INFO main CameraDAO:createCamera:32 - Camera = id: 0 | name: 213 | idPrice: 104 | price: 321 | MP: 3 | img: urq | des.: dasdsa

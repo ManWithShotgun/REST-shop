@@ -1,5 +1,7 @@
 package ru.ilia.rest.service;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
 import org.apache.log4j.Logger;
 import ru.ilia.rest.exception.ExceptionDAO;
 import ru.ilia.rest.model.dao.Factory;
@@ -9,6 +11,7 @@ import ru.ilia.rest.model.util.Role;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import java.security.SecureRandom;
 
@@ -75,7 +78,7 @@ public class RootRS {
                 log.info("account already online");
                 return responseAuthFailJson("password-wrong");
             }
-            String token=new BigInteger(130, new SecureRandom()).toString(32).substring(7);
+            String token= JWT.create().withClaim("role", account.getRole().name()).sign(Algorithm.HMAC256("privateKey"));
             String role=account.getRole().toString();
             account.setToken(token);
             account.setOnline(true);
@@ -86,6 +89,9 @@ public class RootRS {
 
         } catch (ExceptionDAO exceptionDAO) {
             log.error("exceptionDAO",exceptionDAO);
+            return responseAuthFailJson("password-wrong");
+        } catch (UnsupportedEncodingException e) {
+            log.error("UnsupportedEncodingException",e);
             return responseAuthFailJson("password-wrong");
         }
     }

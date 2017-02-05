@@ -13,9 +13,19 @@ import java.io.IOException;
  */
 public class MainFilter implements Filter {
 
-    @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
+    FilterConfig config;
 
+    public void setFilterConfig(FilterConfig config) {
+        this.config = config;
+    }
+
+    public FilterConfig getFilterConfig() {
+        return config;
+    }
+
+    @Override
+    public void init(FilterConfig config) throws ServletException {
+        setFilterConfig(config);
     }
 
     @Override
