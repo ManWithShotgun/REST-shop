@@ -1,5 +1,9 @@
 package ru.ilia.rest.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
+import ru.ilia.rest.model.util.Config;
 import ru.ilia.rest.model.util.Role;
 
 import javax.persistence.*;
@@ -10,19 +14,26 @@ import javax.validation.constraints.NotNull;
  */
 @Entity
 @Table(name = "accounts")
+@JsonRootName("account")
 public class Account {
     @Id
     @Column(name="id_account")
     @GeneratedValue
+    @JsonIgnore
     private long id;
     @Column(unique = true, nullable = false)
+    @JsonProperty("login")
     private String username;
     @NotNull
+    @JsonIgnore
     private String password;
     private String name;
+    private String img;
     private String email;
+    @JsonIgnore
     private String token;
     @Enumerated(EnumType.STRING)
+    @JsonIgnore
     private Role role;
 
     public Account() {
@@ -34,18 +45,20 @@ public class Account {
         this.name = name;
         this.email = email;
         this.role = role;
+        this.img = Config.DEFAULT_ACCOUNT_IAMGE;
+        this.token="";
     }
 
     @Override
     public String toString() {
-        return String.format("Account: id: %d user: %s pass: %s", this.id, this.username, this.password);
+        return String.format("Account: id: %d user: %s pass: %s token: %s", this.id, this.username, this.password, this.token);
     }
 
     public long getId() {
         return id;
     }
 
-    private void setId(long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -95,5 +108,13 @@ public class Account {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }

@@ -7,9 +7,11 @@ import java.util.ResourceBundle;
  */
 public class Config {
     private static final String APP_PROPS="app";
+    public static String DEFAULT_ACCOUNT_IAMGE;
     public static String PATH_IMG;
     static {
         ResourceBundle props=ResourceBundle.getBundle(Config.APP_PROPS);
         Config.PATH_IMG=props.getString("relativePath.toImage");
+        Config.DEFAULT_ACCOUNT_IAMGE=props.getString("defaultAccountImage");
     }
 }
